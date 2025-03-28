@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-align: center;
+  /* padding-top: 100px; */
+  background-color: #111111d4;
+  /* background-color: #111; */
+  color: white;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* nav ul li {
+  margin: 0 15px;
+} */
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: rgb(23, 136, 174);
+}
+
+section {
+  /* padding: 50px; */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#home, #about {
+    min-height: 100vh; /* Ensures each section gets full screen height */
+    width: 100%;
+    padding: 60px 20px;
+  }
+
+.home-content {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.home-text {
+  /* max-width: 50%; */
+  max-width: 600px;
+}
+
+.home-text h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+#home img {
+  max-width: 100%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+}
+
+#about {
+   /* margin-top:5rem; */
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-content {
+  /* max-width: 50%; */
+  max-width: 600px;
+  text-align: left;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  color: rgb(23, 136, 174);
+  text-transform: uppercase;
+  /* letter-spacing: 2px; */
+  margin-bottom: 20px;
+}
+
+.about-me-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  /* justify-content: center; */
+}
+
+.about-me-detail li {
+  list-style: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.about-img img {
+  max-width: 100%;
+  width: 400px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.about-img img:hover {
+  transform: scale(1.05);
+}
+
+.top-skills {
+  margin-top: 2rem;
+}
+
+.top-skills-icons {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.top-skills-icons img {
+  width: 50px;
+  height: 50px;
+}
+
+#projects h2 {
+  font-size: 2rem;
+  color: rgb(23, 136, 174);
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.project-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project-card {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 400px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgb(23, 136, 174);
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.project-card img:hover {
+  transform: scale(1.1);
+}
+
+.project-card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: rgb(23, 136, 174);
+}
+
+.project-card p {
+  color: #ddd;
+  text-align: left;
+}
+
+#contact h2 {
+  font-size: 2rem;
+  color: rgb(23, 136, 174);
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-block;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.contact-links a:hover {
+  transform: scale(1.1);
+}
+
+.contact-links i {
+    font-size: 2rem; 
+  }
+
+@media (max-width: 768px) {
+
+  .home-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .home-text {
+    max-width: 90%;
+  }
+
+  #home img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .top-skills-icons{
+   justify-content: center;
+  }
+
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
